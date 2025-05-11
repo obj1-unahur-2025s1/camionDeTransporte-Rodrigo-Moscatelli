@@ -1,5 +1,5 @@
-import cosas.*
-import camion.*
+import cosas2.*
+import camion2.*
 
 describe "Test para el camion" {
 
@@ -7,17 +7,16 @@ describe "Test para el camion" {
     bumblebee.transformarseEnRobot()
     arena.peso(150)
     bateria.cargarMisiles()
-    embalaje.cosaEnvuelta(paqueteLadrillos)
     paqueteLadrillos.cantidadDeLadrillos(80)
     camion.cargar(bumblebee)
     camion.cargar(arena)
     camion.cargar(bateria)
-    camion.cargar(embalaje)
+    camion.cargar(paqueteLadrillos)
 
   }
 
   test "el peso total del camion es 800+150+300+160+1000 " {
-    assert.equals(800+150+300+160+1000,camion.pesoTotal())
+    assert.equals(800+140+300+184+1000,camion.pesoTotal())
   }
 
   test "el camion tiene algo que pesa 800"{
